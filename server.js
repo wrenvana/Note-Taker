@@ -28,17 +28,15 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
     //title text and id submitted by user
-    // var createNote = {
-    //     title:req.body.title,
-    //     text:req.body.text,
-    //     id:uuidv4(),
-    // }
+    var createNote = {
+        title:req.body.title,
+        text:req.body.text,
+        id:uuidv4(),
+    }
     //fs read file and add to HTML
     fs.readfile('db/db.json', "utf-8", (err, data) => { 
         if (err) throw err;  
-        // var dataNotes = JSON.parse(data);
-        const createNote = req.body;
-        newNote.id = uuidv4();
+        var dataNotes = JSON.parse(data);
         dataNotes.push(createNote);
         fs.writeFile("./db/db.json", JSON.stringify(dataNotes), (err) => {
         err ? console.log(err) : console.log("Note created.")
