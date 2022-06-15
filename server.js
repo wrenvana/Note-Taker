@@ -27,7 +27,6 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.post('/api/notes', (req, res) => {
-    //title text and id submitted by user
     //fs read file and add to HTML
     fs.readfile('db/db.json', "utf-8", (err, data) => { 
         if (err) throw err;

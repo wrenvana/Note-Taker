@@ -2,26 +2,18 @@
 ## Table of Contents
 ----------------------------------------------------------------
 - ## [Description](#Description)
-- ## [Installation](#Installation)
 - ## [Usage](#usage)
 - ## [Contributors](#Contributors)
-- ## [Testing](#Testing)
 - ## [License](#License)
 - ## [Username](#Username)
 - ## [Email](#Email)
 ----------------------------------------------------------------
 ## Description
-This application will allow the user to create, save, and delete notes
-
-----------------------------------------------------------------
-## Installation
-Install Node.js if you do not already have it installed. Download the repository and use your command line program of choice. Type "npm install" into your command line program before running this program.
+This application will allow the user to create, save, and delete notes to keep track of any information they would like to save.
 
 ----------------------------------------------------------------
 ## Usage
-Type "node index.js" into your command line program once you have navigated to the README Generator program's directory. Answer the prompts to generate a README file.
-
-![READMEGenUsage](./assets/READMEGenUsage.gif)
+Application is deployed via <a href="https://express-practice-notetaker.herokuapp.com/">Heroku.</a>
 
 ----------------------------------------------------------------
 ## Contributors
@@ -37,4 +29,4 @@ https://github.com/wrenvana
 
 ----------------------------------------------------------------
 ## Email
-    rensanchez00@gmail.com
+rensanchez00@gmail.com
