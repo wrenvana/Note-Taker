@@ -1,4 +1,3 @@
-console.log("ergoinreoignreoingernghjwngwno;irtbnk;jfbre;nlkrfbnlk;sebrgfnlkergnkergnkern;;;;;;;;;;;;;;;;;;;;;;;;;;kwnbwrepoinbwtropeibnkt[wropibntw[rpeiobntrw[pinbtrpwinbtrwpb[inrtwo[ibntrwo[ibntrw[oibntro[wibntrwoi[nbtroiwb[ntrowi[bntrwoi[bntrow[inbtrowi[bntrowi[bntrwoi[bntrwo[ibnwrtio[bntrwoinbtrwobntirowbtwrbrt\b\\wr\nnwreoibgnwertiogbnwertopgnwerotpginrowiengorewgrwe\nwoeirgnhroweipgnoperiwngroiewngroeiwngroiewgnrgwe\nrweopgnroiewpgnroewingorepwingreowipngreoignropwgrienoirewrg\nrweignorwoeipngriweongroepingeowringorewingorweingropweingoeiwnerowign");
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -29,7 +28,7 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
     //title text and id submitted by user
-    var createNote = {
+    const createNote = {
         title:req.body.title,
         text:req.body.text,
         id:uuidv4(),
@@ -37,7 +36,7 @@ app.post('/api/notes', (req, res) => {
     //fs read file and add to HTML
     fs.readfile('db/db.json', "utf-8", (err, data) => { 
         if (err) throw err;  
-        var dataNotes = JSON.parse(data);
+        const dataNotes = JSON.parse(data);
         dataNotes.push(createNote);
         fs.writeFile("./db/db.json", JSON.stringify(dataNotes), (err) => {
         err ? console.log(err) : console.log("Note created.")
@@ -47,7 +46,7 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete("/api/notes/:id", (req, res) =>{
-    var deleteNote = req.params.id;
+    const deleteNote = req.params.id;
     fs.readfile("db/db.json", "utf-8", (err, data) => {
         if (err) throw err;
         var database = JSON.parse(data);
