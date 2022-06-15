@@ -28,8 +28,5 @@
   "bugs": {
     "url": "https://github.com/wrenvana/Note-Taker/issues"
   },
-  "homepage": "https://github.com/wrenvana/Note-Taker#readme",
-  "dependencies": {
-    "uuid": "^8.3.2"
-  }
+  "homepage": "https://github.com/wrenvana/Note-Taker#readme"
 }
