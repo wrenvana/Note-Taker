@@ -1,5 +1,5 @@
 const express = require("express");
-const { fstat } = require("fs");
+const fs = require("fs");
 const path = require("path");
 const noteData = require("./db/db.json");
 const app = express();
@@ -7,13 +7,14 @@ const PORT = 3001;
 const { v4: uuidv4 } = require("uuid");
 app.use(express.json());
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 app.get('/notes', (req, res) =>
-    res.sendFile(path.join(__dirname, './public/notes.html'))
+    res.sendFile(path.join(__dirname, "./public/notes.html"))
 );
 
 //request the API notes/get from the db.json
