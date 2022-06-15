@@ -4,7 +4,7 @@
   "description": "Express.js Note Taker",
   "main": "server.js",
   "engines": {
-    "node": "16.15.0"
+    "node": "16.x"
   },
   "devDependencies": {
     "express": "^4.18.1",
