@@ -1,10 +1,13 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
+    "engines": {
+    "node": "16.15.0"
+  },
   "description": "Express.js Note Taker",
   "main": "server.js",
   "scripts": {
-  "start": "node index.js",
+  "start": "node server.js",
   "test": "node test.js"
   },
     "repository": {
